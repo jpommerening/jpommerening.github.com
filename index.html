@@ -1,3 +1,81 @@
-<html>
-nothing here yet
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Hi</title>
+  <meta name="description" content="">
+
+  <script src="lib/modernizr/js/modernizr.min.js"></script>
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-responsive.min.css">
+</head>
+<body>
+
+  <div role="main" class="container">
+    <div class="hero-unit" style="margin-top: 1.5em; box-shadow: 0px 5px 5px #f6f6f6;">
+      <h1>Hello<small>,</small></h1>
+      <p class="lead">my name is <a href="https://github.com/jpommerening">Jonas</a>. I make software.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+  </footer>
+
+<!--
+  <script>
+    Modernizr.load([
+    
+    {
+      load: "http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js",
+      callback: function( url, result, key ) {
+        if( !window.jQuery ) {
+          Modernizr.load("lib/jquery/js/jquery.min.js");
+        }
+      },
+    },
+    
+    {
+      test: window.matchMedia,
+      nope: "lib/respond/js/respond.min.js",
+    }, {
+      test: window.JSON,
+      nope: "lib/json/js/json2.min.js",
+    }, {
+      load: [ "lib/angular/js/angular.js",
+              "lib/angular/js/angular-cookies.min.js",
+              "lib/bootstrap/js/bootstrap.min.js",
+              "js/plugins/jquery-fullscreen.js" ],
+    }, {
+      load: [ "js/plugins.js",
+              "js/services.js",
+              "js/controllers.js",
+              "js/filters.js",
+              "js/directives.js",
+              "js/auth.js",
+              "js/session.js",
+              "js/app.js" ],
+      complete: function() {
+        $(document).off('.data-api');
+        angular.bootstrap(document, ['buildbot']);
+      }
+    }]);
+  </script>
+-->
+
+<!--
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+-->
+
+</body>
 </html>
