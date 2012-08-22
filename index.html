@@ -27,46 +27,41 @@
   <footer class="footer">
   </footer>
 
-<!--
   <script>
-    Modernizr.load([
-    
-    {
+    Modernizr.load([{
+      /* media query polyfill */
+      test: window.matchMedia,
+      nope: "lib/respond/js/respond.min.js",
+    }, {
+      /* json polyfill */
+      test: window.JSON,
+      nope: "lib/json/js/json2.min.js",
+    }, {
+      /* jQuery */
       load: "http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js",
       callback: function( url, result, key ) {
         if( !window.jQuery ) {
           Modernizr.load("lib/jquery/js/jquery.min.js");
         }
       },
-    },
-    
-    {
-      test: window.matchMedia,
-      nope: "lib/respond/js/respond.min.js",
     }, {
-      test: window.JSON,
-      nope: "lib/json/js/json2.min.js",
+      /* AngularJS */
+      load: "http://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js",
+      callback: function( url, result, key ) {
+        if( !window.angular ) {
+          Modernizr.load("lib/angular/js/angular.min.js");
+        }
+      },
     }, {
-      load: [ "lib/angular/js/angular.js",
-              "lib/angular/js/angular-cookies.min.js",
-              "lib/bootstrap/js/bootstrap.min.js",
-              "js/plugins/jquery-fullscreen.js" ],
+      load: [ "lib/bootstrap/js/bootstrap.min.js" ],
     }, {
-      load: [ "js/plugins.js",
-              "js/services.js",
-              "js/controllers.js",
-              "js/filters.js",
-              "js/directives.js",
-              "js/auth.js",
-              "js/session.js",
-              "js/app.js" ],
+      load: [ "js/app.js" ],
       complete: function() {
         $(document).off('.data-api');
         angular.bootstrap(document, ['buildbot']);
       }
     }]);
   </script>
--->
 
 <!--
   <script>
